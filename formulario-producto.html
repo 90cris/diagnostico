@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario de producto</title>
+    <!-- <link rel="stylesheet" href="/Style.css"> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        font-size: 16px;
+        padding: 20px;
+      }
+      .container_body {
+        border: 2px solid #ccc;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 50%;
+        height: 80%;
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .contenedor {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .columna {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 250px;
+      }
+
+      .checkbox-group {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      .textarea-grupo {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0 auto 20px;
+        width: 50%;
+      }
+
+      #descripcion {
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+        resize: vertical;
+        font-family: Arial, sans-serif;
+      }
+
+      #guardarBtn {
+        display: block;
+        margin: 0 auto;
+        background-color: #1aab8a;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container_body">
+      <h1>Formulario de producto</h1>
+
+      <div class="contenedor">
+        <div class="columna">
+          <label for="codigo">Código:</label>
+          <input type="text" id="codigo" />
+
+          <label for="bodega">Bodega:</label>
+          <select id="bodega">
+            <option value="">Seleccione bodega</option>
+            <option value="Central">Central</option>
+            <option value="Norte">Norte</option>
+            <option value="Sur">Sur</option>
+          </select>
+
+          <label for="moneda">Moneda:</label>
+          <select id="moneda">
+            <option value="">Seleccione moneda</option>
+            <option value="CLP">CLP</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+          </select>
+        </div>
+
+        <div class="columna">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" />
+
+          <label for="sucursal">Sucursal:</label>
+          <select id="sucursal">
+            <option value="">Seleccione sucursal</option>
+            <option value="Talca">Talca</option>
+            <option value="Santiago">Santiago</option>
+            <option value="Concepción">Concepción</option>
+          </select>
+
+          <label for="precio">Precio:</label>
+          <input type="text" id="precio" />
+        </div>
+      </div>
+
+      <div class="checkbox-group">
+        <label><input type="checkbox" id="plastico" /> Plástico</label>
+        <label><input type="checkbox" id="metal" /> Metal</label>
+        <label><input type="checkbox" id="madera" /> Madera</label>
+        <label><input type="checkbox" id="vidrio" /> Vidrio</label>
+        <label><input type="checkbox" id="textil" /> Textil</label>
+      </div>
+
+      <div class="textarea-grupo">
+        <label for="descripcion">Descripción del producto:</label>
+        <textarea id="descripcion"></textarea>
+      </div>
+
+      <button id="guardarBtn">Guardar Producto</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
